@@ -140,15 +140,19 @@
   <p>When you create an account or use the App, we may collect the following information:</p>
   <ul>
     <li><strong>Account Information:</strong> Your name and email address, used for account creation and communication.</li>
-    <li><strong>Birth Data:</strong> Your date of birth, time of birth, and location of birth. This information is essential for generating accurate astrological charts and personalized interpretations.</li>
-    <li><strong>Profile Preferences:</strong> Language preferences, notification settings, and other customization choices you make within the App.</li>
+    <li><strong>Birth Data:</strong> Your date of birth, time of birth, and location of birth including latitude, longitude, and timezone. This information is essential for generating accurate astrological charts and personalized interpretations.</li>
+    <li><strong>Profile Picture:</strong> An optional profile photo you may upload.</li>
+    <li><strong>Messages &amp; Media:</strong> Messages, photos, videos, and voice recordings sent through the chat feature.</li>
+    <li><strong>Social Content:</strong> Posts, comments, and other social content you create within the App.</li>
+    <li><strong>Profile Preferences:</strong> Language preferences, interpretation mode, house system, notification settings, and other customization choices you make within the App.</li>
   </ul>
 
   <h3>1.2 Information Collected Automatically</h3>
   <ul>
-    <li><strong>Device Information:</strong> Device type, operating system version, and unique device identifiers.</li>
-    <li><strong>Usage Data:</strong> Features accessed, interaction patterns, and session duration to help us improve the App experience.</li>
+    <li><strong>Device Information:</strong> Device type, operating system version, and platform (iOS/Android).</li>
+    <li><strong>Usage Data:</strong> Features accessed, screen views, interaction patterns, and session duration to help us improve the App experience.</li>
     <li><strong>Push Notification Tokens:</strong> If you opt in to push notifications, we collect your device token to deliver notifications.</li>
+    <li><strong>Online Status:</strong> Your online status and last active timestamp for social features.</li>
   </ul>
 
   <h3>1.3 Subscription Information</h3>
@@ -160,9 +164,10 @@
     <li>To create and manage your user account.</li>
     <li>To generate personalized astrological charts, natal reports, compatibility readings, and daily insights based on your birth data.</li>
     <li>To provide AI-powered astrological interpretations and guidance through our integration with the Anthropic Claude API.</li>
+    <li>To enable social features including messaging, voice/video calling, friend connections, and community posts.</li>
     <li>To manage your subscription and provide access to premium features.</li>
     <li>To send push notifications about transits, daily insights, and other relevant astrological events (with your consent).</li>
-    <li>To improve and optimize the App's features, performance, and user experience.</li>
+    <li>To improve and optimize the App's features, performance, and user experience through analytics.</li>
     <li>To respond to your support requests and communicate important updates.</li>
   </ul>
 
@@ -170,22 +175,32 @@
   <p>We use the following third-party services to operate the App. Each service has its own privacy policy governing how it handles your data:</p>
 
   <h3>3.1 Supabase</h3>
-  <p>We use Supabase for user authentication and database storage. Your account information and birth data are stored securely in Supabase's infrastructure. For more information, visit <a href="https://supabase.com/privacy" target="_blank" rel="noopener">Supabase's Privacy Policy</a>.</p>
+  <p>We use Supabase for user authentication, database storage, and file storage. Your account information, birth data, messages, media, and social data are stored securely in Supabase's AWS infrastructure with Row Level Security. For more information, visit <a href="https://supabase.com/privacy" target="_blank" rel="noopener">Supabase's Privacy Policy</a>.</p>
 
   <h3>3.2 Anthropic Claude API</h3>
-  <p>We use the Anthropic Claude API to generate AI-powered astrological interpretations. Your birth data may be sent to Anthropic's servers to produce personalized content. Anthropic does not use API inputs to train its models. For more information, visit <a href="https://www.anthropic.com/privacy" target="_blank" rel="noopener">Anthropic's Privacy Policy</a>.</p>
+  <p>We use the Anthropic Claude API to generate AI-powered astrological interpretations. Your birth data is sent to Anthropic's servers to produce personalized readings but is not stored by Anthropic. Anthropic does not use API inputs to train its models. For more information, visit <a href="https://www.anthropic.com/privacy" target="_blank" rel="noopener">Anthropic's Privacy Policy</a>.</p>
 
   <h3>3.3 RevenueCat</h3>
-  <p>We use RevenueCat to manage in-app subscriptions across platforms. RevenueCat processes subscription status information and anonymous identifiers. For more information, visit <a href="https://www.revenuecat.com/privacy" target="_blank" rel="noopener">RevenueCat's Privacy Policy</a>.</p>
+  <p>We use RevenueCat to manage in-app subscriptions across platforms. RevenueCat processes subscription status information and purchase data. For more information, visit <a href="https://www.revenuecat.com/privacy" target="_blank" rel="noopener">RevenueCat's Privacy Policy</a>.</p>
 
   <h3>3.4 Expo Push Notifications</h3>
   <p>We use Expo's push notification service to deliver notifications to your device. Expo processes your device push token to route notifications. For more information, visit <a href="https://expo.dev/privacy" target="_blank" rel="noopener">Expo's Privacy Policy</a>.</p>
+
+  <h3>3.5 Agora.io</h3>
+  <p>We use Agora for voice and video calling infrastructure. Real-time audio and video streams are routed through Agora's servers during active calls. No call recordings are stored by Agora. For more information, visit <a href="https://www.agora.io/en/privacy-policy/" target="_blank" rel="noopener">Agora's Privacy Policy</a>.</p>
+
+  <h3>3.6 OpenStreetMap Nominatim</h3>
+  <p>We use OpenStreetMap's Nominatim service for birth location geocoding. City names you enter are sent to resolve geographic coordinates (latitude and longitude). For more information, visit <a href="https://osmfoundation.org/wiki/Privacy_Policy" target="_blank" rel="noopener">OpenStreetMap's Privacy Policy</a>.</p>
+
+  <h3>3.7 Google Maps / Apple Maps</h3>
+  <p>We use Google Maps and Apple Maps for map rendering in astrocartography features. Your interactions with the map may be subject to Google's or Apple's respective privacy policies.</p>
 
   <h2>4. Data Security</h2>
   <p>We take the security of your personal information seriously and implement industry-standard measures to protect it:</p>
   <ul>
     <li><strong>Encryption in Transit:</strong> All data transmitted between your device and our servers is encrypted using TLS (Transport Layer Security).</li>
     <li><strong>Encryption at Rest:</strong> Your personal data stored in our databases is encrypted at rest.</li>
+    <li><strong>Row Level Security:</strong> Database access is controlled by Row Level Security policies ensuring users can only access their own data.</li>
     <li><strong>Access Controls:</strong> Access to personal data is restricted to authorized personnel who require it to operate and maintain the service.</li>
     <li><strong>Regular Audits:</strong> We conduct periodic reviews of our data collection, storage, and processing practices to ensure ongoing security.</li>
   </ul>
@@ -201,21 +216,24 @@
     <li>In connection with a merger, acquisition, or sale of assets, in which case you will be notified of any change in data handling practices.</li>
   </ul>
 
-  <h2>6. Your Rights and Data Control</h2>
+  <h2>6. Analytics &amp; Opt-Out</h2>
+  <p>We collect anonymous usage analytics (feature usage, screen views) to improve the App. You can opt out of analytics data collection at any time through the App's Settings &gt; Privacy &amp; Data section. When opted out, no analytics events will be tracked or transmitted.</p>
 
-  <h3>6.1 Account Deletion</h3>
-  <p>You may delete your account and all associated data at any time through the App's settings. Upon account deletion, we will permanently remove all of your personal information from our active databases within 30 days. Some information may be retained in encrypted backups for a limited period as required by law or for legitimate business purposes, after which it will be permanently deleted.</p>
+  <h2>7. Your Rights and Data Control</h2>
 
-  <h3>6.2 Data Access and Portability</h3>
-  <p>You have the right to request a copy of the personal data we hold about you. To make such a request, contact us at <a href="mailto:support@alignastrology.com">support@alignastrology.com</a>.</p>
+  <h3>7.1 Account Deletion</h3>
+  <p>You may delete your account and all associated data at any time through the App's settings. Upon account deletion, we will permanently remove all of your personal information — including your profile, messages, posts, friend connections, media files, and analytics data — from our active databases. Some information may be retained in encrypted backups for a limited period as required by law or for legitimate business purposes, after which it will be permanently deleted.</p>
 
-  <h3>6.3 Data Correction</h3>
+  <h3>7.2 Data Access and Portability</h3>
+  <p>You have the right to request a copy of the personal data we hold about you. You can export your data directly from the App's settings, or contact us at <a href="mailto:support@align-astrology.com">support@align-astrology.com</a>.</p>
+
+  <h3>7.3 Data Correction</h3>
   <p>You can update your personal information, including birth data, at any time through the App's profile settings.</p>
 
-  <h3>6.4 Notification Preferences</h3>
+  <h3>7.4 Notification Preferences</h3>
   <p>You can opt out of push notifications at any time through your device settings or the App's notification preferences.</p>
 
-  <h2>7. GDPR Compliance (European Economic Area)</h2>
+  <h2>8. GDPR Compliance (European Economic Area)</h2>
   <p>If you are located in the European Economic Area (EEA), you have certain rights under the General Data Protection Regulation (GDPR):</p>
   <ul>
     <li><strong>Right of Access:</strong> You have the right to request copies of your personal data.</li>
@@ -227,13 +245,13 @@
   </ul>
   <p><strong>Legal Basis for Processing:</strong> We process your personal data based on the following legal grounds:</p>
   <ul>
-    <li><strong>Consent:</strong> You have given consent for processing your data for the stated purposes (e.g., providing birth data for astrological calculations).</li>
+    <li><strong>Consent:</strong> You have given consent for processing your data for the stated purposes (e.g., providing birth data for astrological calculations, agreeing to Terms of Service at signup).</li>
     <li><strong>Contract Performance:</strong> Processing is necessary for the performance of our service agreement with you.</li>
     <li><strong>Legitimate Interest:</strong> Processing is necessary for our legitimate interests, such as improving the App, provided these interests do not override your rights.</li>
   </ul>
-  <p>To exercise any of these rights, please contact us at <a href="mailto:support@alignastrology.com">support@alignastrology.com</a>. We will respond to your request within 30 days.</p>
+  <p>To exercise any of these rights, please contact us at <a href="mailto:support@align-astrology.com">support@align-astrology.com</a>. We will respond to your request within 30 days.</p>
 
-  <h2>8. CCPA Compliance (California Residents)</h2>
+  <h2>9. CCPA Compliance (California Residents)</h2>
   <p>If you are a California resident, you have specific rights under the California Consumer Privacy Act (CCPA):</p>
   <ul>
     <li><strong>Right to Know:</strong> You have the right to request that we disclose what personal information we collect, use, disclose, and sell about you.</li>
@@ -246,28 +264,29 @@
     <li>Identifiers (name, email address)</li>
     <li>Personal information categories listed in the California Customer Records statute (name, date of birth)</li>
     <li>Geolocation data (birth location, used solely for astrological calculations)</li>
-    <li>Internet or other electronic network activity information (usage data)</li>
+    <li>Internet or other electronic network activity information (usage data, analytics)</li>
+    <li>Audio, visual, or similar information (voice messages, video messages, profile photos)</li>
   </ul>
-  <p>To submit a CCPA request, contact us at <a href="mailto:support@alignastrology.com">support@alignastrology.com</a>. We will verify your identity before processing your request and respond within 45 days.</p>
+  <p>To submit a CCPA request, contact us at <a href="mailto:support@align-astrology.com">support@align-astrology.com</a>. We will verify your identity before processing your request and respond within 45 days.</p>
 
-  <h2>9. Children's Privacy</h2>
-  <p>Align is not intended for use by individuals under the age of 13. We do not knowingly collect personal information from children under 13. If we become aware that we have collected personal data from a child under 13 without verification of parental consent, we will take steps to remove that information from our servers promptly.</p>
-  <p>If you are a parent or guardian and believe your child under 13 has provided us with personal information, please contact us at <a href="mailto:support@alignastrology.com">support@alignastrology.com</a> so we can take appropriate action.</p>
+  <h2>10. Children's Privacy</h2>
+  <p>Align is not intended for use by individuals under the age of 18. We do not knowingly collect personal information from minors under 18. If we become aware that we have collected personal data from someone under 18 without verification of parental consent, we will take steps to remove that information from our servers promptly.</p>
+  <p>If you are a parent or guardian and believe your child under 18 has provided us with personal information, please contact us at <a href="mailto:support@align-astrology.com">support@align-astrology.com</a> so we can take appropriate action.</p>
 
-  <h2>10. Data Retention</h2>
-  <p>We retain your personal information for as long as your account is active or as needed to provide you with our services. If you delete your account, we will delete your personal data within 30 days, except where retention is required by law or for legitimate business purposes such as resolving disputes or enforcing our agreements.</p>
+  <h2>11. Data Retention</h2>
+  <p>We retain your personal information for as long as your account is active or as needed to provide you with our services. Analytics events are automatically purged after 90 days. Expired stories are removed after 24 hours. Read notifications are removed after 60 days. If you delete your account, we will delete your personal data within 30 days, except where retention is required by law or for legitimate business purposes such as resolving disputes or enforcing our agreements.</p>
 
-  <h2>11. International Data Transfers</h2>
+  <h2>12. International Data Transfers</h2>
   <p>Your information may be transferred to and processed in countries other than your country of residence. These countries may have data protection laws that are different from the laws of your country. We ensure that appropriate safeguards are in place to protect your personal information in accordance with this Privacy Policy and applicable law.</p>
 
-  <h2>12. Changes to This Privacy Policy</h2>
+  <h2>13. Changes to This Privacy Policy</h2>
   <p>We may update this Privacy Policy from time to time. We will notify you of any material changes by posting the new Privacy Policy within the App and updating the "Effective Date" at the top of this page. We encourage you to review this Privacy Policy periodically for any changes. Continued use of the App after changes are posted constitutes your acceptance of the revised policy.</p>
 
-  <h2>13. Contact Us</h2>
+  <h2>14. Contact Us</h2>
   <p>If you have any questions or concerns about this Privacy Policy or our data practices, please contact us at:</p>
   <p>
     <strong>Align Astrology</strong><br />
-    Email: <a href="mailto:support@alignastrology.com">support@alignastrology.com</a>
+    Email: <a href="mailto:support@align-astrology.com">support@align-astrology.com</a>
   </p>
 
 </div>
